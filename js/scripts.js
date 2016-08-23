@@ -41,6 +41,7 @@ $(document).ready(function(){
   $("form#new-contact").submit(function(event){
     event.preventDefault();
 
+
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
@@ -65,11 +66,12 @@ $(document).ready(function(){
         $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
       });
     });
-
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
-    $("input#new-street").val("");
-    $("input#new-city").val("");
-    $("input#new-state").val("");
+    $("input.new-street").val("");
+    $("input.new-city").val("");
+    $("input.new-state").val("");
   });
+
+
 });
